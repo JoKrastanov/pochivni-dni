@@ -1,0 +1,35 @@
+#info,
+#vupros {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#vupros {
+    width: 33vh;
+    height: 33vh;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-weight: 800;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+#info {
+    padding: 2vw;
+    display: none;
+    background-color: black;
+    width: 50vw;
+    border-radius: 10px;
+}
+
+#info p {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 2vh;
+}
