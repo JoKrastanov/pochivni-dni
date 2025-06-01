@@ -20,16 +20,11 @@ const pochivniDni = [
     [new Date(2025, 11, 26), "Коледа", "./media/koleda.jpg"]
 ];
 
-const dnes = Date.now();
+const dnes = new Date();
 
-const sledvashtPraznik = pochivniDni.reduce(
-    (prev, curr) => {
-        const prevDiff = Math.abs(prev[0] - dnes);
-        const currDiff = Math.abs(curr[0] - dnes);
-        
-        return currDiff < prevDiff ? curr : prev
-    }
-)
+const sledvashtPraznik = pochivniDni
+    .filter(([date]) => date > dnes)
+    .sort((a, b) => a[0] - b[0])[0];
 
 buttonVupros.onclick = () => {
     audio.currentTime = 19.8;
